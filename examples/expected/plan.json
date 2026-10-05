@@ -1,0 +1,175 @@
+{
+  "contract_name": "etsyads.plan",
+  "contract_version": "1.0",
+  "producer_version": "1.0.0",
+  "kind": "plan",
+  "local_id": "local-3ba75ea6acc1990e",
+  "status": "PLAN_READY",
+  "review": "HUMAN_REVIEW_REQUIRED",
+  "publish_authorized": false,
+  "external_reads": false,
+  "external_writes": false,
+  "generation_mode": "deterministic",
+  "input": {
+    "platform": "etsy",
+    "market": "US",
+    "currency": "USD",
+    "source": {
+      "kind": "synthetic",
+      "note": "All products, money, permissions and results are fictional test data."
+    },
+    "money_decimals": 2,
+    "campaign": {
+      "mode": "onsite_ads",
+      "days": 14,
+      "budget": "1400",
+      "account_ready": true,
+      "feature_confirmed": true,
+      "target_return": null,
+      "ad_rate": null
+    },
+    "products": [
+      {
+        "sku": "demo-cup",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "stock": 30,
+        "listing_ready": true,
+        "advertising_eligible": true,
+        "buy_box": null,
+        "order_revenue": "100",
+        "order_costs": {
+          "cogs": "35",
+          "platform_fees": "8",
+          "fulfilment": "10",
+          "other": "2"
+        },
+        "target_profit": "10",
+        "expected_cvr": "0.05",
+        "fee_base_per_order": null,
+        "terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ]
+      },
+      {
+        "sku": "demo-hold",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "stock": 0,
+        "listing_ready": true,
+        "advertising_eligible": true,
+        "buy_box": null,
+        "order_revenue": "100",
+        "order_costs": {
+          "cogs": "35",
+          "platform_fees": "8",
+          "fulfilment": "10",
+          "other": "2"
+        },
+        "target_profit": "10",
+        "expected_cvr": "0.05",
+        "fee_base_per_order": null,
+        "terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ]
+      }
+    ],
+    "assets": {
+      "rights_confirmed": null,
+      "live_ready": null
+    }
+  },
+  "result": {
+    "platform_workflow": [
+      "檢查主圖、標題、標籤、商品需求與可配送國家",
+      "核對每筆訂單成本、售價與库存",
+      "選擇可測試商品並規劃整店日預算",
+      "將 SKU 分攤視為內部會計，不是 Etsy 的商品出價",
+      "閱讀廣告報表，將 Offsite Ads 分開"
+    ],
+    "products": [
+      {
+        "sku": "demo-cup",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "readiness": "PILOT_CANDIDATE",
+        "blocked_by": [],
+        "missing": [],
+        "economics": {
+          "status": "SCENARIO_ONLY",
+          "non_ad_contribution_per_order": "45.000000",
+          "break_even_cpa": "45.000000",
+          "break_even_roas_on_net_revenue": "2.222222",
+          "target_ad_allowance_per_order": "35.000000",
+          "target_roas_on_net_revenue": "2.857143",
+          "economic_cpc_ceiling": "1.750000"
+        },
+        "supplied_listing_terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ],
+        "research_status": "NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA"
+      },
+      {
+        "sku": "demo-hold",
+        "title": "Synthetic ceramic cup / 合成示範商品",
+        "readiness": "BLOCKED",
+        "blocked_by": [
+          "out_of_stock"
+        ],
+        "missing": [],
+        "economics": {
+          "status": "SCENARIO_ONLY",
+          "non_ad_contribution_per_order": "45.000000",
+          "break_even_cpa": "45.000000",
+          "break_even_roas_on_net_revenue": "2.222222",
+          "target_ad_allowance_per_order": "35.000000",
+          "target_roas_on_net_revenue": "2.857143",
+          "economic_cpc_ceiling": "1.750000"
+        },
+        "supplied_listing_terms": [
+          "ceramic cup",
+          "陶瓷杯"
+        ],
+        "research_status": "NO_SEARCH_VOLUME_OR_LIVE_KEYWORD_DATA"
+      }
+    ],
+    "budget": {
+      "scope": "shop_daily_budget_accounting_only_not_listing_bids",
+      "total_cap": "1400.000000",
+      "allocated_total": "1400.000000",
+      "reserve": "0.000000",
+      "allocation": [
+        {
+          "sku": "demo-cup",
+          "pilot_allowance": "1400.000000"
+        }
+      ],
+      "days": 14,
+      "daily_reference_not_live_budget": "100.000000"
+    },
+    "requested_target_return": null,
+    "target_return_validated_for_platform": false,
+    "checklist": [
+      "主圖、標題、標籤與商品內容一致",
+      "可配送區域與預期買家一致",
+      "未知成本不能當零",
+      "整店日預算不等於各 Listing 出價",
+      "廣告成交與自然／Offsite 成交要分開"
+    ],
+    "notes": [
+      "Etsy Ads is onsite CPC advertising. Offsite Ads has a different scope and fee model and is excluded.",
+      "Do not invent manual keyword bidding, negative-keyword controls or per-listing budgets.",
+      "A listing-level strategy may depend on account features; this v1 does not model that control.",
+      "An attributed order can contain an item different from the clicked listing; do not assign its profit using a clicked SKU margin.",
+      "All allocations are equal-split pilot accounting scenarios, not optimized bids or live budgets.",
+      "Use net revenue and fully loaded non-ad costs from the same representative order. No platform fees are assumed.",
+      "Reported gross GMV / spend is not directly comparable with a net-revenue break-even threshold.",
+      "Capability confirmations are user assertions, not independently verified account eligibility.",
+      "Review stock, attribution maturity, rights, site rules and changes before taking any manual action."
+    ],
+    "source_refs": [
+      "ETS-1",
+      "ETS-2"
+    ]
+  }
+}

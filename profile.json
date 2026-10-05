@@ -1,0 +1,59 @@
+{
+  "slug": "etsyads",
+  "name": "EtsyAds Skill Lite",
+  "platform": "etsy",
+  "market": "US",
+  "currency": "USD",
+  "focus": "Etsy 站內廣告選品、整店預算、Listing 檢查與成效閱讀",
+  "english": "Offline Etsy onsite Ads listing readiness, shop-level budget scenarios and report analysis.",
+  "modes": [
+    "onsite_ads"
+  ],
+  "workflows": {
+    "onsite_ads": [
+      "檢查主圖、標題、標籤、商品需求與可配送國家",
+      "核對每筆訂單成本、售價與库存",
+      "選擇可測試商品並規劃整店日預算",
+      "將 SKU 分攤視為內部會計，不是 Etsy 的商品出價",
+      "閱讀廣告報表，將 Offsite Ads 分開"
+    ]
+  },
+  "budget_scope": {
+    "onsite_ads": "shop_daily_budget_accounting_only_not_listing_bids"
+  },
+  "notes": [
+    "Etsy Ads is onsite CPC advertising. Offsite Ads has a different scope and fee model and is excluded.",
+    "Do not invent manual keyword bidding, negative-keyword controls or per-listing budgets.",
+    "A listing-level strategy may depend on account features; this v1 does not model that control.",
+    "An attributed order can contain an item different from the clicked listing; do not assign its profit using a clicked SKU margin."
+  ],
+  "checklist": [
+    "主圖、標題、標籤與商品內容一致",
+    "可配送區域與預期買家一致",
+    "未知成本不能當零",
+    "整店日預算不等於各 Listing 出價",
+    "廣告成交與自然／Offsite 成交要分開"
+  ],
+  "sources": [
+    {
+      "id": "ETS-1",
+      "title": "Set up and manage Etsy Ads",
+      "url": "https://help.etsy.com/hc/en-gb/articles/360033701174-How-to-Set-Up-and-Manage-an-Etsy-Ads-Campaign",
+      "checked_on": "2026-10-05",
+      "scope": "Etsy onsite",
+      "summary": "Choose listings and a daily budget; charges accrue for clicks. Availability is account-dependent."
+    },
+    {
+      "id": "ETS-2",
+      "title": "Review Etsy Ads performance",
+      "url": "https://help.etsy.com/hc/en-gb/articles/360034223613-How-to-Review-the-Performance-of-Your-Etsy-Ads",
+      "checked_on": "2026-10-05",
+      "scope": "Etsy onsite",
+      "summary": "Review costs and attributed results; listing quality and attribution context matter."
+    }
+  ],
+  "skill_id": "etsyads-skill-lite",
+  "repo": "ckolpeter/EtsyAds-Skill-Lite",
+  "version": "1.0.0",
+  "source_policy": "2026-10-05 research snapshot; no live capability assertion; refresh manually before operating."
+}
